@@ -1,6 +1,6 @@
 package src.Figures;
 
-import src.GameBoard;
+import src.Game.GameBoard;
 
 public class Bishop extends Figure {
    public Bishop(boolean isWhite) {

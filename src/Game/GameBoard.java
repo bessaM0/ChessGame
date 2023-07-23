@@ -1,4 +1,4 @@
-package src;
+package src.Game;
 
 import src.Figures.Figure;
 import src.Figures.Rook;
@@ -45,5 +45,9 @@ public class GameBoard {
 
     public Figure getFigure(int x , int y){
         return this.gameField[x][y];
+    }
+
+    public void setFigure(int x, int y, Figure figure){
+        gameField[x][y] = figure;
     }
 }

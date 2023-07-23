@@ -9,23 +9,41 @@ public class Pawn extends Figure {
 
     @Override
     public boolean isValidMove(int startX, int startY, int endX, int endY, GameBoard gameBoard) {
-        // do something
         // Pawn can go one point up for white, and one point down for black
         // Pawn can attack diagonal if there is a figure and has different color
-        // we have to differentiate between white and black
 
         if (this.isWhite()) {
+            if (!this.hasMoved() && startY == 1 && endY == startY + 2 && gameBoard.getFigure(endX, endY) == null
+                    && startX == endX) {
+                // Double move forward for white pawn on its initial position
+                return true;
+            }
             int checkValue = startY + 1;
-            if (checkValue == endY && gameBoard.getFigure(endX, endY) == null) {
+            if (checkValue == endY && gameBoard.getFigure(endX, endY) == null && startX == endX) {
+                // Regular move forward
+                return true;
+            } else if (checkValue == endY && Math.abs(startX - endX) == 1 && gameBoard.getFigure(endX, endY) != null
+                    && !gameBoard.getFigure(endX, endY).isWhite()) {
+                // Diagonal capture
                 return true;
             }
         } else {
-            int checkValue = startY - 1;
-            if (checkValue == endY && gameBoard.getFigure(endX, endY) == null) {
+            if (!this.hasMoved() && startY == 6 && endY == startY - 2 && gameBoard.getFigure(endX, endY) == null
+                    && startX == endX) {
+                // Double move forward for black pawn on its initial position
                 return true;
             }
-
+            int checkValue = startY - 1;
+            if (checkValue == endY && gameBoard.getFigure(endX, endY) == null && startX == endX) {
+                // Regular move forward
+                return true;
+            } else if (checkValue == endY && Math.abs(startX - endX) == 1 && gameBoard.getFigure(endX, endY) != null
+                    && gameBoard.getFigure(endX, endY).isWhite()) {
+                // Diagonal capture
+                return true;
+            }
         }
         return false;
     }
+
 }

@@ -1,15 +1,25 @@
 package src.Figures;
 
-import src.GameBoard;
+import src.Game.GameBoard;
 
 public abstract class Figure {
     private boolean isWhite;
+
+    private boolean hasMoved = false;
 
     public Figure(boolean isWhite) {
         this.isWhite = isWhite;
     }
 
-    public boolean isWhite(){
+    public boolean hasMoved() {
+        return this.hasMoved;
+    }
+
+    public void setHasMoved() {
+        hasMoved = true;
+    }
+
+    public boolean isWhite() {
         return this.isWhite;
     };
 
