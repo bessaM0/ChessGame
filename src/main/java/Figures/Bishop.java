@@ -1,10 +1,14 @@
-package src.Figures;
+package src.main.java.Figures;
 
-import src.Game.GameBoard;
+import src.main.java.Game.GameBoard;
 
 public class Bishop extends Figure {
    public Bishop(boolean isWhite) {
         super(isWhite);
+    }
+
+    public String getSymbol(){
+        return isWhite() ? "B" : "b";
     }
 
     @Override

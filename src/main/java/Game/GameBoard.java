@@ -1,12 +1,12 @@
-package src.Game;
+package src.main.java.Game;
 
-import src.Figures.Figure;
-import src.Figures.Rook;
-import src.Figures.Queen;
-import src.Figures.Bishop;
-import src.Figures.King;
-import src.Figures.Knight;
-import src.Figures.Pawn;
+import src.main.java.Figures.Bishop;
+import src.main.java.Figures.Figure;
+import src.main.java.Figures.King;
+import src.main.java.Figures.Knight;
+import src.main.java.Figures.Pawn;
+import src.main.java.Figures.Queen;
+import src.main.java.Figures.Rook;
 
 public class GameBoard {
     private Figure[][] gameField;
@@ -50,4 +50,20 @@ public class GameBoard {
     public void setFigure(int x, int y, Figure figure){
         gameField[x][y] = figure;
     }
+
+    public void display() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (gameField[i][j] != null) {
+                    System.out.print(gameField[i][j].getSymbol());
+                } else {
+                    System.out.print("-");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+
+    
 }

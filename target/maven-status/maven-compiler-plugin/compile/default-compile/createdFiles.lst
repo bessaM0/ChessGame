@@ -1,0 +1,10 @@
+src/Main.class
+src/Game/GameBoard.class
+src/Figures/Rook.class
+src/Figures/Pawn.class
+src/Figures/Bishop.class
+src/Game/Game.class
+src/Figures/Knight.class
+src/Figures/King.class
+src/Figures/Queen.class
+src/Figures/Figure.class

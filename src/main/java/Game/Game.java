@@ -1,18 +1,23 @@
-package src.Game;
+package src.main.java.Game;
 
-import src.Figures.Bishop;
-import src.Figures.Figure;
-import src.Figures.Knight;
-import src.Figures.Rook;
-import src.Figures.Pawn;
-import src.Figures.Queen;
 import java.util.Scanner;
+
+import src.main.java.Figures.Bishop;
+import src.main.java.Figures.Figure;
+import src.main.java.Figures.Knight;
+import src.main.java.Figures.Pawn;
+import src.main.java.Figures.Queen;
+import src.main.java.Figures.Rook;
 
 public class Game {
     private GameBoard gameBoard;
 
     public Game() {
         gameBoard = new GameBoard();
+    }
+
+    public GameBoard getGameBoard(){
+        return this.gameBoard;
     }
 
     public void makeMove(int startX, int startY, int endX, int endY) {

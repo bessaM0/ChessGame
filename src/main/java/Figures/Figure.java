@@ -1,11 +1,13 @@
-package src.Figures;
+package src.main.java.Figures;
 
-import src.Game.GameBoard;
+import src.main.java.Game.GameBoard;
 
 public abstract class Figure {
     private boolean isWhite;
 
     private boolean hasMoved = false;
+
+    public abstract String getSymbol();
 
     public Figure(boolean isWhite) {
         this.isWhite = isWhite;

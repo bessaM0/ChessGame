@@ -1,10 +1,14 @@
-package src.Figures;
+package src.main.java.Figures;
 
-import src.Game.GameBoard;
+import src.main.java.Game.GameBoard;
 
 public class Knight extends Figure {
    public Knight(boolean isWhite) {
         super(isWhite);
+    }
+
+    public String getSymbol(){
+        return isWhite() ? "N" : "n";
     }
 
     @Override

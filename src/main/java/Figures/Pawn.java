@@ -1,10 +1,15 @@
-package src.Figures;
+package src.main.java.Figures;
 
-import src.GameBoard;
+import src.main.java.Game.GameBoard;
 
 public class Pawn extends Figure {
+
     public Pawn(boolean isWhite) {
         super(isWhite);
+    }
+
+    public String getSymbol(){
+        return isWhite() ? "P" : "p";
     }
 
     @Override
