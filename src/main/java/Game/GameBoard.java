@@ -1,12 +1,12 @@
-package src.main.java.Game;
+package Game;
 
-import src.main.java.Figures.Bishop;
-import src.main.java.Figures.Figure;
-import src.main.java.Figures.King;
-import src.main.java.Figures.Knight;
-import src.main.java.Figures.Pawn;
-import src.main.java.Figures.Queen;
-import src.main.java.Figures.Rook;
+import Figures.Bishop;
+import Figures.Figure;
+import Figures.King;
+import Figures.Knight;
+import Figures.Pawn;
+import Figures.Queen;
+import Figures.Rook;
 
 public class GameBoard {
     private Figure[][] gameField;

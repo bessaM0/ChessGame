@@ -1,6 +1,6 @@
-package src.main.java.Figures;
+package Figures;
 
-import src.main.java.Game.GameBoard;
+import Game.GameBoard;
 
 public abstract class Figure {
     private boolean isWhite;

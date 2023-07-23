@@ -1,5 +1,4 @@
-package src.main.java;
-import src.main.java.Game.Game;
+import Game.Game;
 
 public class Main {
    public static void main(String[] args) {
